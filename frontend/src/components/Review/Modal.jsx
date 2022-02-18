@@ -1,5 +1,5 @@
 import React from "react";
-import ReactPortal from "./ReactPortal";
+import ReactPortal from "../Utilities/ReactPortal";
 
 import { useRef, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";

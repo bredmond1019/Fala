@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import { useWordContext } from "./WordContextProvider";
+import { useWordContext } from "../Utilities/WordContextProvider";
 
-import coffee_shop from "./../images/coffee_shop.jpg";
+import coffee_shop from "../../images/coffee_shop.jpg";
 
 function WordOfTheDay(props) {
   const { wordOfDay, wordTranslation } = useWordContext();

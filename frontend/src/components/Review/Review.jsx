@@ -6,7 +6,7 @@ import Words from "./Words";
 import ListOfWords from "./ListOfWords";
 import "animate.css";
 
-import { useWordContext } from "./WordContextProvider";
+import { useWordContext } from "../Utilities/WordContextProvider";
 
 import Modal from "./Modal";
 

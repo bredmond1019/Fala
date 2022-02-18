@@ -1,45 +1,51 @@
-.Header {
+@use "variables" as var;
+
+.header-container {
   background: url("./../images/Forest.png");
   background-size: cover;
   background-position: center;
-  min-height: 300px;
+
+  // min-height: 300px;
   width: 100vw;
   height: 60vh;
-  max-height: 800px;
+  // max-height: 800px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.Header .heading {
-  /* background-color: green; */
-
+.header-wrapper {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
 }
 
-.Header .circle-shape {
+.header-title-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: yellow;
+
+  background-color: var.$yellow;
   height: 12rem;
-  width: 25rem;
+  width: 80%;
   border-radius: 50%;
 }
 
-.Header .header-title {
-  font-family: "Architects Daughter", cursive;
-  font-size: 5rem;
+.header-title {
+  font-family: var.$architect;
+  font-size: 4rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  color: #0d6efd;
+
+  color: var.$blue;
 
   height: 100px;
   width: 100px;
 
   letter-spacing: 6px;
-  text-shadow: -0.1em 0.1em 0.1em silver;
+  text-shadow: var.$silver-shadow;
 }

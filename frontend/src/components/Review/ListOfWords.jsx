@@ -6,7 +6,7 @@ import {
 } from "react-transition-group";
 import "animate.css";
 
-import { useWordContext } from "./WordContextProvider";
+import { useWordContext } from "../Utilities/WordContextProvider";
 
 function ListOfWords({ showVocabList, setShowVocabList }) {
   const { words, deleteWord } = useWordContext();

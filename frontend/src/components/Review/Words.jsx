@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "animate.css";
 
-import { useWordContext } from "./WordContextProvider";
+import { useWordContext } from "../Utilities/WordContextProvider";
 
 export default function Words({ showWordTile, setShowWordTile }) {
   const { words, deleteWord } = useWordContext();

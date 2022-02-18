@@ -1,8 +1,8 @@
 import React from "react";
 
 import Header from "./Header";
-import Review from "./Review";
-import WordOfTheDay from "./WordOfTheDay";
+import Review from "./Review/Review";
+import WordOfTheDay from "./Review/WordOfTheDay";
 
 import two_people from "./../images/two_people.jpg";
 
@@ -11,7 +11,7 @@ function Home() {
     <div className="app-body">
       <div className="home-wrapper">
         <Header />
-        <div className="home-title-section">
+        <div className="home-title-container">
           <div className="home-title-wrapper">
             <h1 className="home-title">Welcome to Fala!</h1>
             <h3 className="home-subtitle">
@@ -23,9 +23,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="word-of-the-day-wrapper">
-        <WordOfTheDay />
-      </div>
+      <div className="word-of-the-day-wrapper">{/* <WordOfTheDay /> */}</div>
       <div id="review" className="review-wrapper">
         <Review />
       </div>
