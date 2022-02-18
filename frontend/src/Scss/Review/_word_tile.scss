@@ -4,22 +4,23 @@
 // WORD TILE AND BUTTONS
 //
 
-.word-tiles-wrapper {
+.word-tiles-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-left: 10vw;
+  //   margin-left: 10vw;
+  margin: 10px 0px;
   padding: 5vh 0;
-  max-height: 800px;
+  //   max-height: 800px;
 }
 
 .word-tiles-header {
-  color: #0d6efd;
+  color: var.$blue;
 
   letter-spacing: 4px;
   text-align: center;
-  text-shadow: -0.05em 0.05em 0.05em silver;
+  text-shadow: var.$silver-shadow;
 }
 
 .word-tiles-title {
@@ -30,16 +31,26 @@
 // WORD TILE
 //
 
+.word-tile-wrapper {
+  display: flex;
+  //   height: 700px;
+  justify-content: center;
+  align-items: center;
+}
+
 .word-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 
-  width: 30vw;
-  height: 500px;
+  //   width: 30vw;
+  width: 70%;
+  min-width: 65vw;
+  //   height: 500px;
+  height: 60vh;
 
-  margin: 5vh 30px;
+  margin: 5vh 5px;
   padding: 20px 20px;
 
   border: solid;
@@ -47,29 +58,23 @@
   border-color: greenyellow;
   border-radius: 20%;
 
-  background: linear-gradient(rgba(13, 110, 253, 0.95), rgba(13, 110, 253, 0.95)),
-    url("./../images/circles1.jpg");
-}
-
-.word-tile-wrapper {
-  display: flex;
-  height: 700px;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(var.$blue-rgba, var.$blue-rgba), url(var.$circle-img);
 }
 
 .word-tile-expression {
   margin-right: 20%;
 
-  font-size: 5rem;
-  color: rgba(255, 255, 0, 1);
+  font-size: 2.5rem;
+  color: var.$yellow;
   text-shadow: -0.05em 0.05em 0.05em black;
   text-transform: capitalize;
 }
 
 .word-tile-img-wrapper {
-  width: 60%;
-  height: 40%;
+  //   width: 80%;
+  //   height: 30%;
+  width: 120px;
+  height: 120px;
   margin-bottom: 30px;
 }
 
@@ -77,14 +82,21 @@
   width: 100%;
   height: 100%;
   border-radius: 25%;
+  object-fit: cover;
+  object-position: center;
 }
 .word-tile-current-translation {
   color: yellow;
   text-transform: capitalize;
+  width: 80%;
+  height: 20%;
+  text-align: center;
 }
 
 .btn-current-translation {
   background-color: rgba(0, 200, 83, 1) !important;
+  width: 80% !important;
+  height: 20% !important;
 }
 
 //

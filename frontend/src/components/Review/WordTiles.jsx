@@ -50,14 +50,14 @@ export default function WordTiles() {
       classNames="word-tile"
       unmountOnExit
     >
-      <div className="word-tiles-wrapper">
+      <div className="word-tiles-container">
         <div className="word-tiles-header">
           <h1 className="word-tiles-title">Do you Know the Word?</h1>
           {/* <h3 className="word-tiles-subtitle">Click to Translate</h3> */}
         </div>
         <div className="word-tile-wrapper">
           <div className="btn-tile-left-wrapper">
-            <button className="btn-primary btn insert-btn-review" onClick={decreaseTiles}>
+            <button className="btn-primary btn words-menu-btn" onClick={decreaseTiles}>
               {" "}
               {"<"}{" "}
             </button>
