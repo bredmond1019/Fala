@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { useWordTileContext } from "../Utilities/WordTileContextProvider";
 
 export default function Form(props) {
   const [review_word, setWord] = useState("");
+  const { editedWord, insertWord, setIsOpen } = useWordTileContext();
 
   return (
-    <div className="form-wrapper">
-      {props.word ? (
-        <div className="mb-3 form-container">
+    <div className="form-container">
+      {editedWord ? (
+        <div className="mb-3 form-wrapper">
           <label htmlFor="title" className="form-label">
             Enter A Word
           </label>
@@ -22,8 +24,8 @@ export default function Form(props) {
           <button
             className="btn btn-primary mt-3"
             onClick={() => {
-              props.insertWord(review_word);
-              props.setIsOpen(false);
+              insertWord(review_word);
+              setIsOpen(false);
             }}
           >
             Insert

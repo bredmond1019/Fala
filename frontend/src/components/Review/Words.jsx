@@ -3,11 +3,11 @@ import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 import Form from "./Form";
 import WordTiles from "./WordTiles";
-import ListOfWords from "./ListOfWords";
+import VocabList from "./VocabList";
 import "animate.css";
 
 import { useWordContext } from "../Utilities/WordContextProvider";
-import { useWordTileContext } from "../Utilities/WordTilesContextProvider";
+import { useWordTileContext } from "../Utilities/WordTileContextProvider";
 
 import Modal from "./Modal";
 
@@ -26,44 +26,43 @@ function Words() {
   } = useWordTileContext();
 
   return (
-    <div className="word-tiles-wrapper">
-      <div className="word-tiles-menu">
-        <h1 className="word-tiles-menu-title">What would you like to do?</h1>
-        <button
-          className="modal-btn btn-primary btn insert-btn-review"
-          onClick={openModal}
-        >
-          Add New Word
-        </button>
-        <button
-          className="btn-primary btn insert-btn-review"
-          onClick={() => {
-            setShowVocabList(!showVocabList);
-            setShowWordTile(false);
-            setDisplay(2);
-          }}
-        >
-          Review List of Words
-        </button>
-        <button
-          className="btn-primary btn insert-btn-review"
-          onClick={() => {
-            setShowWordTile(!showWordTile);
-            setShowVocabList(false);
-            setDisplay(1);
-          }}
-        >
-          {showWordTile ? "Close" : "Show"} Word Tiles
-        </button>
+    <div className="words-container">
+      <div className="words-menu">
+        <h1 className="words-menu-title">What would you like to do?</h1>
+        <div className="words-menu-buttons-wrapper">
+          <button className="modal-btn btn-primary btn words-menu-btn" onClick={openModal}>
+            Add New Word
+          </button>
+          <button
+            className="btn-primary btn words-menu-btn"
+            onClick={() => {
+              setShowVocabList(!showVocabList);
+              setShowWordTile(false);
+              setDisplay(2);
+            }}
+          >
+            Review List of Words
+          </button>
+          <button
+            className="btn-primary btn words-menu-btn"
+            onClick={() => {
+              setShowWordTile(!showWordTile);
+              setShowVocabList(false);
+              setDisplay(1);
+            }}
+          >
+            {showWordTile ? "Close" : "Show"} Word Tiles
+          </button>
+        </div>
       </div>
 
       <WordTiles />
-      <ListOfWords />
-      <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
-        <Form word={editedWord} insertWord={insertWord} setIsOpen={setIsOpen} />
+      <VocabList />
+      <Modal handleClose={() => setIsOpen(false)}>
+        <Form />
       </Modal>
     </div>
   );
 }
 
-export default WordTiles;
+export default Words;

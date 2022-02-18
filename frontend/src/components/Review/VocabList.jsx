@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
-import {
-  SwitchTransition,
-  TransitionGroup,
-  CSSTransition,
-} from "react-transition-group";
+import { SwitchTransition, TransitionGroup, CSSTransition } from "react-transition-group";
 import "animate.css";
 
 import { useWordContext } from "../Utilities/WordContextProvider";
-import { useWordTileContext } from "../Utilities/WordTilesContextProvider";
+import { useWordTileContext } from "../Utilities/WordTileContextProvider";
 
 function ListOfWords() {
   const { words, deleteWord } = useWordContext();
@@ -17,25 +13,18 @@ function ListOfWords() {
     <CSSTransition
       in={showVocabList}
       timeout={{ enter: 300, exit: 300 }}
-      classNames="list-of-vocab-wrapper"
+      classNames="list-of-vocab-container"
       unmountOnExit
     >
-      <div className="list-of-vocab-wrapper">
+      <div className="list-of-vocab-container">
         <h1 className="vocab-review-title">Words You've Added</h1>
         <TransitionGroup className="list-of-vocab">
           {words &&
             words.map((word) => (
-              <CSSTransition
-                key={word.id}
-                timeout={500}
-                classNames="vocab-word-wrapper"
-              >
+              <CSSTransition key={word.id} timeout={500} classNames="vocab-word-wrapper">
                 <div className="vocab-word-wrapper">
                   <h1 className="vocab-word">{word.expression}</h1>
-                  <button
-                    className="btn-danger remove-btn sm"
-                    onClick={() => deleteWord(word)}
-                  >
+                  <button className="btn-danger remove-btn sm" onClick={() => deleteWord(word)}>
                     &times;
                   </button>
                 </div>

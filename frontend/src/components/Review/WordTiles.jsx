@@ -3,7 +3,7 @@ import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "animate.css";
 
 import { useWordContext } from "../Utilities/WordContextProvider";
-import { useWordTileContext } from "../Utilities/WordTilesContextProvider";
+import { useWordTileContext } from "../Utilities/WordTileContextProvider";
 
 export default function WordTiles() {
   const { showWordTile, setShowWordTile } = useWordTileContext();
@@ -50,17 +50,14 @@ export default function WordTiles() {
       classNames="word-tile"
       unmountOnExit
     >
-      <div className="words-wrapper">
-        <div className="words-header">
+      <div className="word-tiles-wrapper">
+        <div className="word-tiles-header">
           <h1 className="word-tiles-title">Do you Know the Word?</h1>
           {/* <h3 className="word-tiles-subtitle">Click to Translate</h3> */}
         </div>
         <div className="word-tile-wrapper">
           <div className="btn-tile-left-wrapper">
-            <button
-              className="btn-primary btn insert-btn-review"
-              onClick={decreaseTiles}
-            >
+            <button className="btn-primary btn insert-btn-review" onClick={decreaseTiles}>
               {" "}
               {"<"}{" "}
             </button>
@@ -90,9 +87,7 @@ export default function WordTiles() {
                   classNames="word-tile-current-translation"
                   unmountOnExit
                 >
-                  <h1 className="word-tile-current-translation">
-                    {currentTranslation}
-                  </h1>
+                  <h1 className="word-tile-current-translation">{currentTranslation}</h1>
                 </CSSTransition>
                 {!seeCurrentTranslation && (
                   <button
@@ -106,10 +101,7 @@ export default function WordTiles() {
             </CSSTransition>
           </SwitchTransition>
           <div className="btn-tile-left-wrapper">
-            <button
-              className="btn-primary btn insert-btn-review"
-              onClick={increaseTiles}
-            >
+            <button className="btn-primary btn insert-btn-review" onClick={increaseTiles}>
               {" "}
               {">"}{" "}
             </button>

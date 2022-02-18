@@ -6,9 +6,6 @@ font-family: 'Indie Flower', cursive; */
 
 @use "header";
 @use "navbar";
-@use "review";
-@use "word_of_day";
-@use "words";
 @use "home";
-@use "modal";
-@use "vocab_list";
+@use "word_of_day";
+@use "./Review/review";

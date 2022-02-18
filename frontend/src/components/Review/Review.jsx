@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Words from "./Words";
-import WordTileContextProvider from "../Utilities/WordTilesContextProvider";
+import WordTileContextProvider from "../Utilities/WordTileContextProvider";
 import "animate.css";
 
 export default function Review() {
@@ -10,9 +10,7 @@ export default function Review() {
       <div className="review-header-wrapper">
         <div className="review-title-wrapper">
           <h1 className="review-title">Vocab Review</h1>
-          <h2 className="review-subtitle">
-            Here's Where You Can Review Your Vocab Words
-          </h2>
+          <h2 className="review-subtitle">Here's Where You Can Review Your Vocab Words</h2>
         </div>
         <div className="review-image-wrapper"></div>
       </div>

@@ -3,10 +3,12 @@ import ReactPortal from "../Utilities/ReactPortal";
 
 import { useRef, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
+import { useWordTileContext } from "../Utilities/WordTileContextProvider";
 
-function Modal({ children, isOpen, handleClose }) {
+function Modal({ children, handleClose }) {
   const nodeRef = useRef(null);
-  // if (!isOpen) return null;
+
+  const { isOpen } = useWordTileContext();
 
   return (
     <ReactPortal wrapperId="react-portal-modal-container">
@@ -20,10 +22,7 @@ function Modal({ children, isOpen, handleClose }) {
         <div className="modal" ref={nodeRef}>
           <div className="modal-content">
             {children}
-            <button
-              onClick={handleClose}
-              className="close-btn btn-danger insert-btn-review"
-            >
+            <button onClick={handleClose} className="close-btn btn-danger insert-btn-review">
               CLOSE
             </button>
           </div>
