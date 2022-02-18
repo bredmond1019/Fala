@@ -13,7 +13,7 @@ function WordOfTheDay(props) {
   };
 
   return (
-    <div className="word-of-day-container">
+    <div className="word-of-the-day-container">
       <div className="word-of-day-image-wrapper">
         <img src={coffee_shop} alt="" className="word-of-day-image" />
       </div>
@@ -22,25 +22,25 @@ function WordOfTheDay(props) {
         <h1 className="word-of-day-title">Palavra Do Dia</h1>
 
         <h1 className="word-of-day">{wordOfDay}</h1>
-        <div className="word-of-day-translation-wrapper">
-          <h1 className="translation-title">Do You Know It?</h1>
-          {seeTranslation ? (
-            <h1
-              className={`word-of-day-translation word-of-day ${
-                seeTranslation ? "grow" : ""
-              } `}
-            >
-              {wordTranslation}
-            </h1>
-          ) : (
-            <button
-              className="btn-primary btn insert-btn-word-day translation-btn"
-              onClick={openTranslation}
-            >
-              See Translation
-            </button>
-          )}
-        </div>
+        {/* <div className="word-of-day-translation-wrapper"> */}
+        <h1 className="translation-title">Do You Know It?</h1>
+        {seeTranslation ? (
+          <h1
+            className={`word-of-day-translation word-of-day ${
+              seeTranslation ? "grow" : ""
+            } `}
+          >
+            {wordTranslation}
+          </h1>
+        ) : (
+          <button
+            className="btn-primary btn insert-btn-word-day translation-btn"
+            onClick={openTranslation}
+          >
+            See Translation
+          </button>
+        )}
+        {/* </div> */}
       </div>
     </div>
   );

@@ -7,9 +7,11 @@ import {
 import "animate.css";
 
 import { useWordContext } from "../Utilities/WordContextProvider";
+import { useWordTileContext } from "../Utilities/WordTilesContextProvider";
 
-function ListOfWords({ showVocabList, setShowVocabList }) {
+function ListOfWords() {
   const { words, deleteWord } = useWordContext();
+  const { showVocabList } = useWordTileContext();
 
   return (
     <CSSTransition

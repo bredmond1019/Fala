@@ -1,24 +1,29 @@
+@use "variables" as var;
+
 // REVIEW
 .review-container {
-  font-family: "Architects Daughter", cursive;
-  background-color: rgb(0, 200, 83);
+  font-family: var.$architect;
+  background-color: var.$green;
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  // min-height: ;
+
+  padding: 20px 10px;
 }
 
-.review-header-container {
-  padding-top: min(5vh, 30px);
-  padding-bottom: 5vh;
-  max-height: 800px;
-}
+// .review-header-container {
+//   padding-top: min(5vh, 30px);
+//   padding-bottom: 5vh;
+//   max-height: 800px;
+// }
 
-.review-header {
+.review-header-wrapper {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-around;
-  margin: 10vh 0;
-  max-height: 800px;
+  align-items: center;
+  // margin: 10vh 0;
+  // max-height: 800px;
+  height: min(100vh, 600px);
 
   // padding-top: 10%;
 }
@@ -33,15 +38,17 @@
   align-items: center;
   justify-content: space-around;
 
-  background: linear-gradient(rgba(255, 255, 0, 0.95), rgba(255, 255, 0, 0.95)),
-    url("./../images/circles1.jpg");
+  background: linear-gradient(var.$yellow-rgba, var.$yellow-rgba),
+    url(var.$circle-img);
   border-radius: 10%;
 
-  width: 30vw;
-  color: #0d6efd;
+  width: 100%;
+  // width: 30vw;
+  color: var.$blue;
   padding: 40px;
   // Flip Background Upside Down
-  transform: scaleX(-1) translateY(-15%);
+  // transform: scaleX(-1) translateY(-15%);
+  transform: scaleX(-1);
 }
 
 // Then flip all CHILDREN ELEMENTS back
@@ -50,31 +57,35 @@
 }
 
 .review-title {
-  color: #0d6efd;
-  font-size: 4rem;
+  color: var.$blue;
+  font-size: 1.5rem;
+  // font-size: 4rem;
   letter-spacing: 4px;
   text-align: center;
-  text-shadow: -0.05em 0.05em 0.05em silver;
+  text-shadow: var.$silver-shadow;
 }
 
 .review-subtitle {
-  color: rgba(0, 200, 83, 1);
-  font-family: "Architects Daughter", cursive;
+  color: var.$green;
+  font-family: var.$architect;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 3px;
-  text-shadow: -0.05em 0.05em 0.05em silver;
+  font-size: 1.2rem;
+  text-shadow: var.$silver-shadow;
 }
 
 //
 // REVIEW IMAGE FOR HEADER
 //
 .review-image-wrapper {
-  width: 40vw;
-  min-height: 500px;
+  width: 100%;
+  // width: 40vw;
+  // min-height: 500px;
+  height: min(40vh, 500px);
 
   background:
-      // #0d6efd,
+      // var.$blue,
     linear-gradient(rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.1)),
     url("./../images/man_woman_talking.jpg");
   background-size: cover;
@@ -83,7 +94,7 @@
   border-radius: 20%;
   border: 3px solid white;
 
-  transform: translateY(15%);
+  // transform: translateY(15%);
 }
 
 //
@@ -103,20 +114,20 @@
   font-size: 4rem;
   letter-spacing: 4px;
   text-align: center;
-  text-shadow: -0.05em 0.05em 0.05em silver;
+  text-shadow: var.$silver-shadow;
 
   // background: linear-gradient(rgba(0, 200, 83, 0.9), rgba(0, 200, 83, 0.9));
   // background-color: yellow;
 
-  background: linear-gradient(rgba(255, 255, 0, 0.95), rgba(255, 255, 0, 0.95)),
-    url("./../images/circles1.jpg");
+  background: linear-gradient(var.$yellow-rgba, var.$yellow-rgba),
+    url(var.$circle-img);
 
   color: rgba(13, 110, 253, 1);
   border: solid;
   border-width: 2px;
   border-radius: 5%;
   // border-color: white;
-  // border-color: rgba(0, 200, 83, 1);
+  // border-color: var.$green;
   width: 80%;
 }
 
