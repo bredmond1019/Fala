@@ -101,7 +101,7 @@ export default function WordTiles() {
             </CSSTransition>
           </SwitchTransition>
           <div className="btn-tile-left-wrapper">
-            <button className="btn-primary btn insert-btn-review" onClick={increaseTiles}>
+            <button className="btn-primary btn words-menu-btn" onClick={increaseTiles}>
               {" "}
               {">"}{" "}
             </button>

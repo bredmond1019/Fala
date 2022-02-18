@@ -41,3 +41,53 @@
 .form-control {
   width: 100%;
 }
+
+//
+// BREAKING POINT 450px
+//
+
+@media screen and (min-width: 450px) {
+  .form-wrapper {
+    height: 60%;
+  }
+
+  .form-label {
+    font-size: 2rem;
+  }
+}
+
+//
+// BREAKING POINT 650px
+//
+
+@media screen and (min-width: 650px) {
+  .form-label {
+    font-size: 3rem;
+  }
+
+  .form-control {
+    font-size: 1.5rem;
+  }
+
+  .form-button {
+    transform: scale(1.3);
+  }
+}
+
+//
+// BREAKING POINT 1000px
+//
+
+@media screen and (min-width: 1000px) {
+  .form-label {
+    font-size: 4rem;
+  }
+
+  .form-control {
+    font-size: 1.5rem;
+  }
+
+  .form-button {
+    transform: scale(1.5);
+  }
+}

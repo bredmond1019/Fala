@@ -23,7 +23,7 @@ function Modal({ children, handleClose }) {
           <div className="modal-content">
             {children}
             <button onClick={handleClose} className="close-btn btn-danger insert-btn-review">
-              CLOSE
+              Close
             </button>
           </div>
         </div>

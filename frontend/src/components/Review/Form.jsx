@@ -22,7 +22,7 @@ export default function Form(props) {
           />
 
           <button
-            className="btn btn-primary mt-3"
+            className="btn btn-primary mt-3 form-button"
             onClick={() => {
               insertWord(review_word);
               setIsOpen(false);
