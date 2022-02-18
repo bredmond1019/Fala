@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className="home-wrapper">
       <div className="header-container ">
-        <div className="header-title-wrapper circle-shape">
+        <div className="header-title-wrapper">
           <h1 className="header-title">FALA!</h1>
         </div>
       </div>

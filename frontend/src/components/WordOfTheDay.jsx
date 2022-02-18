@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import { useWordContext } from "../Utilities/WordContextProvider";
+import { useWordContext } from "./Utilities/WordContextProvider";
 
-import coffee_shop from "../../images/coffee_shop.jpg";
+import coffee_shop from "./../images/coffee_shop.jpg";
 
 function WordOfTheDay(props) {
   const { wordOfDay, wordTranslation } = useWordContext();
@@ -25,11 +25,7 @@ function WordOfTheDay(props) {
         {/* <div className="word-of-day-translation-wrapper"> */}
         <h1 className="translation-title">Do You Know It?</h1>
         {seeTranslation ? (
-          <h1
-            className={`word-of-day-translation word-of-day ${
-              seeTranslation ? "grow" : ""
-            } `}
-          >
+          <h1 className={`word-of-day-translation word-of-day ${seeTranslation ? "grow" : ""} `}>
             {wordTranslation}
           </h1>
         ) : (

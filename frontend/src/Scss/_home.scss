@@ -21,7 +21,7 @@
 
   // height: 40%;
   min-height: 220px;
-  max-height: 600px;
+  // max-height: 600px;
   padding: 5vh 5vw;
 
   text-align: center;
@@ -64,4 +64,81 @@
   max-height: 350px;
 
   border-radius: 25%;
+}
+
+//
+//  BREAKPOINT 500px
+//
+
+@media screen and (min-width: 500px) {
+  .home-title-container {
+    padding: 8vh 5vw;
+  }
+
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .home-subtitle {
+    font-size: 2rem;
+  }
+}
+
+//
+//  BREAKPOINT 800px
+//
+
+@media screen and (min-width: 800px) {
+  .home-wrapper {
+    height: 100vh;
+  }
+
+  .home-title-container {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 5vh 2vw;
+  }
+
+  .home-title-wrapper {
+    height: 400px;
+    width: 40vw;
+    margin-bottom: 0;
+  }
+
+  .home-title {
+    font-size: 3.5rem;
+  }
+
+  .home-subtitle {
+    font-size: 2rem;
+  }
+
+  .home-image-wrapper {
+    width: 40vw;
+  }
+}
+
+//
+//  BREAKPOINT 1000px
+//
+
+@media screen and (min-width: 1000px) {
+  .home-title-container {
+    max-width: 1000px;
+    padding: 8vh 2vw;
+  }
+}
+//
+//  BREAKPOINT 1200px
+//
+
+@media screen and (min-width: 1200px) {
+  .home-title-container {
+    max-width: unset;
+  }
+
+  .home-title-wrapper {
+    max-width: 480px;
+  }
 }

@@ -41,7 +41,7 @@ function Words() {
               setDisplay(2);
             }}
           >
-            Review List of Words
+            Review Vocab Words
           </button>
           <button
             className="btn-primary btn words-menu-btn"

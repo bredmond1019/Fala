@@ -2,7 +2,7 @@ import React from "react";
 
 import Header from "./Header";
 import Review from "./Review/Review";
-import WordOfTheDay from "./Review/WordOfTheDay";
+import WordOfTheDay from "./WordOfTheDay";
 
 function Home() {
   return (

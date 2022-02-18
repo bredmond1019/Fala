@@ -49,3 +49,9 @@
   letter-spacing: 6px;
   text-shadow: var.$silver-shadow;
 }
+
+@media screen and (min-width: 425px) {
+  .header-title-wrapper {
+    width: 340px;
+  }
+}
