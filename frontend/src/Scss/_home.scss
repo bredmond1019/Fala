@@ -70,9 +70,13 @@
 //  BREAKPOINT 500px
 //
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
   .home-title-container {
-    padding: 8vh 5vw;
+    padding: 5vh 5vw;
+  }
+
+  .home-title-wrapper {
+    min-height: 30vh;
   }
 
   .home-title {
@@ -89,10 +93,6 @@
 //
 
 @media screen and (min-width: 800px) {
-  .home-wrapper {
-    height: 100vh;
-  }
-
   .home-title-container {
     flex-direction: row;
     justify-content: space-around;
@@ -101,7 +101,7 @@
   }
 
   .home-title-wrapper {
-    height: 400px;
+    min-height: 300px;
     width: 40vw;
     margin-bottom: 0;
   }
@@ -124,6 +124,10 @@
 //
 
 @media screen and (min-width: 1000px) {
+  .home-wrapper {
+    height: 100vh;
+  }
+
   .home-title-container {
     max-width: 1000px;
     padding: 8vh 2vw;
