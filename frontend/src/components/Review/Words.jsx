@@ -11,6 +11,8 @@ import { useWordTileContext } from "../Utilities/WordTileContextProvider";
 
 import Modal from "./Modal";
 
+import Traslate from "./Traslate";
+
 function Words() {
   const { words, insertWord, deleteWord } = useWordContext();
   const {
@@ -55,6 +57,7 @@ function Words() {
           </button>
         </div>
       </div>
+      {/* <Traslate /> */}
 
       <WordTiles />
       <VocabList />

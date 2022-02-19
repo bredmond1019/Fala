@@ -13,7 +13,7 @@ function App() {
       {/* <Navigation /> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Fala/" element={<Home />} />
       </Routes>
     </div>
   );
