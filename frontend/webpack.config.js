@@ -3,8 +3,11 @@ var webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
+// const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
+  // target: "node",
   mode: "development",
   entry: __dirname + "/src/index.js",
   output: {
@@ -28,7 +31,6 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
           },
           "css-loader",
-          "postcss-loader",
           "sass-loader",
         ],
       },
@@ -57,10 +59,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
-    // new webpack.DllReferencePlugin({
-    //   context: __dirname,
-    //   manifest: path.resolve(__dirname, "dist", "vendor-manifest.json"),
-    // }),
+    new Dotenv(),
+    // new NodePolyfillPlugin(),
   ],
 
   devtool: "source-map",
@@ -68,17 +68,3 @@ module.exports = {
     historyApiFallback: true,
   },
 };
-
-/*
-
-
-
-plugins: 
-
-devtool: "source-map",
-devServer: {
-// contentBase: "./dist",
-hot: true,
-},
-
-*/
