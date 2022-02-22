@@ -8,7 +8,6 @@ import { useWordTileContext } from "../Utilities/WordTileContextProvider";
 export default function WordTiles() {
   const { showWordTile, setShowWordTile } = useWordTileContext();
   const { words } = useWordContext();
-  console.log(words);
 
   const [currentWord, setCurrentWord] = useState("");
   const [currentImage, setCurrentImage] = useState("");
@@ -27,20 +26,17 @@ export default function WordTiles() {
     setCurrentImage(words[tileNumber]?.url);
     setCurrentTranslation(words[tileNumber]?.translation);
     setSeeCurrentTranslation(false);
-    console.log(tileNumber);
   }, [tileNumber]);
 
   const decreaseTiles = () => {
     let max = words.length;
     setTileNumber(tileNumber - 1 >= 0 ? (tileNumber - 1) % max : max - 1);
     // setCurrentWord(words[tileNumber]?.expression);
-    console.log(tileNumber);
   };
   const increaseTiles = () => {
     let max = words.length;
     setTileNumber((tileNumber + 1) % max);
     // setCurrentWord(words[tileNumber]?.expression);
-    console.log(tileNumber);
   };
 
   return (
